@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 56px;
+    filter: drop-shadow(0px 10px 8px rgba(0, 179, 161, 0.5));
+    -webkit-text-stroke: 2px #03DAC6;
+    -webkit-text-fill-color: transparent;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+}
+
+.cell {
+    border: 1px solid #E0E0E0;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #1E1E1E;
+}
+
+p {
+    text-align: center;
+    font-size: 34px;
+}
+
+.cell[data-value="X"] {
+    color: #03DAC6;
+}
+
+.cell[data-value="0"] {
+    color: #410091;
+}

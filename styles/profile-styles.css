@@ -1,0 +1,185 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-info {
+    background-color: #1E1E1E;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.profile-info h2 {
+    font-size: 32px;
+    color: #03DAC6;
+    margin-bottom: 25px;
+    -webkit-text-stroke: 1px #03DAC6;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.avatar-container {
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid #03DAC6;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(3, 218, 198, 0.3);
+}
+
+.avatar-container img {
+    display: block;
+    border: 2px solid #121212;
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #B0B0B0;
+}
+
+.profile-info p b {
+    color: #03DAC6;
+}
+
+.control-panel {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+button, .control-panel a {
+    display: inline-block;
+    width: 250px;
+    padding: 12px;
+    background-color: transparent;
+    color: #03DAC6;
+    border: 2px solid #03DAC6;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+button:hover, .control-panel a:hover {
+    background-color: #03DAC6;
+    color: #121212;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 179, 161, 0.6);
+}
+
+button:active, .control-panel a:active {
+    transform: scale(0.98);
+}
+
+.control-panel a[href="logout.php"] {
+    border-color: #410091;
+    color: #410091;
+}
+
+.control-panel a[href="logout.php"]:hover {
+    background-color: #410091;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(84, 26, 155, 0.6);
+}
+
+.stats-container {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #2C2C2C;
+    border-radius: 8px;
+    border-left: 4px solid #03DAC6;
+}
+
+.stats-container h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #03DAC6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #B0B0B0;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(3, 218, 198, 0.5);
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.file-label {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    background-color: #2C2C2C;
+    color: #03DAC6;
+    border: 1px dashed #03DAC6;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.file-label:hover {
+    background-color: #333;
+    border-style: solid;
+    box-shadow: 0 0 10px rgba(3, 218, 198, 0.2);
+}
+
+.delete-form {
+    margin-bottom: 15px;
+}

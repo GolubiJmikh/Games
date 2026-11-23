@@ -1,0 +1,106 @@
+.nav ul li {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-out;
+}
+
+.menu-icon:checked ~ .nav ul li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-icon:checked ~ .nav ul li:nth-child(1) { transition-delay: 400ms; }
+.menu-icon:checked ~ .nav ul li:nth-child(2) { transition-delay: 500ms; }
+.menu-icon:checked ~ .nav ul li:nth-child(3) { transition-delay: 600ms; }
+.menu-icon:checked ~ .nav ul li:nth-child(4) { transition-delay: 700ms; }
+
+.menu-icon {
+    display: none;
+}
+
+label[for="menu-icon"] {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 80px;
+    height: 70px;
+    padding-bottom: 10px;
+    color: #03DAC6;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #41009167;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-icon:checked + label[for="menu-icon"] {
+    background-color: #00ffea;
+    color: #1E1E1E;
+    transform: rotate(180deg);
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.menu-icon:checked + label[for="menu-icon"] span {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.nav {
+    position: fixed;
+    background-color: #121212;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-icon:checked ~ .nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.a-menu {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #03DAC6;
+    border: 2px solid #03DAC6;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.25s ease-in-out;
+}
+
+.a-menu:hover {
+    background-color: #03DAC6;
+    color: #121212;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(0, 179, 161, 0.6);
+}
+
+.a-menu:active {
+    transform: scale(0.98);
+    background-color: #02b3a3;
+}
